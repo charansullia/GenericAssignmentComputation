@@ -6,21 +6,21 @@ namespace GenericAssignment
 {
     class GenericComputation
     {
-        public static double FindMaxDouble(double FirstValue,double SecondValue,double ThirdValue)
+        public static string FindMaxString(string FirstString,string SecondString,string ThirdString)
         {
-            if (FirstValue.CompareTo(SecondValue) > 0 && FirstValue.CompareTo(ThirdValue)>0) 
+            if (FirstString.CompareTo(SecondString) > 0 && FirstString.CompareTo(ThirdString)>0) 
             {
-                return FirstValue;
+                return FirstString;
             }
-            if(SecondValue.CompareTo(FirstValue)>0 && SecondValue.CompareTo(ThirdValue)>0)
+            if(SecondString.CompareTo(FirstString)>0 && SecondString.CompareTo(ThirdString)>0)
             {
-                return SecondValue;
+                return SecondString;
             }
-            if(ThirdValue.CompareTo(FirstValue)>0 && ThirdValue.CompareTo(SecondValue)>0)
+            if(ThirdString.CompareTo(FirstString)>0 && ThirdString.CompareTo(SecondString)>0)
             {
-                return ThirdValue;
+                return ThirdString;
             }
-                return FirstValue;
+                return FirstString;
                     
         }
         
