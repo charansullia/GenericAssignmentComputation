@@ -6,7 +6,7 @@ namespace GenericAssignment
     {
         static void Main(string[] args)
         {
-          int output=GenericComputation.FindMaxIntiger(23, 45, 10);
+          double output=GenericComputation.FindMaxDouble(23.5, 45.78, 10.90);
           Console.WriteLine(output);
         }
     }

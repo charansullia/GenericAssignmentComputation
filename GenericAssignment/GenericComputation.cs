@@ -6,7 +6,7 @@ namespace GenericAssignment
 {
     class GenericComputation
     {
-        public static int FindMaxIntiger(int FirstValue,int SecondValue,int ThirdValue)
+        public static double FindMaxDouble(double FirstValue,double SecondValue,double ThirdValue)
         {
             if (FirstValue.CompareTo(SecondValue) > 0 && FirstValue.CompareTo(ThirdValue)>0) 
             {
