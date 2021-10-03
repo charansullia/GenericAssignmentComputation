@@ -4,26 +4,29 @@ using System.Text;
 
 namespace GenericAssignment
 {
-    class GenericComputation
+    public class GenericComputation<T> where T : IComparable
     {
-        public static string FindMaxString(string FirstString,string SecondString,string ThirdString)
+        public T[] value;
+        public GenericComputation(T[] value)
         {
-            if (FirstString.CompareTo(SecondString) > 0 && FirstString.CompareTo(ThirdString)>0) 
-            {
-                return FirstString;
-            }
-            if(SecondString.CompareTo(FirstString)>0 && SecondString.CompareTo(ThirdString)>0)
-            {
-                return SecondString;
-            }
-            if(ThirdString.CompareTo(FirstString)>0 && ThirdString.CompareTo(SecondString)>0)
-            {
-                return ThirdString;
-            }
-                return FirstString;
-                    
+            this.value = value;
         }
-        
 
+        public T[] Sort(T[] values)
+        {
+            Array.Sort(values);
+            return values;
+        }
+
+        public T MaxValue(params T[] values)
+        {
+            var sorted_values = Sort(values);
+            return sorted_values[sorted_values.Length - 1];
+        }
+        public void PrintMaxValue()
+        {
+            var max = MaxValue(this.value);
+            Console.WriteLine("Maximum value is " + max);
+        }
     }
 }
